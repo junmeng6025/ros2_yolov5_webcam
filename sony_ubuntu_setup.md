@@ -104,4 +104,4 @@ gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p
 ## 3) Test the connection with ROS2
 Test the SONY-ROS2 connection with a [YOLOv5 integrated ROS2 program](https://github.com/junmeng6025/ros2_yolov5_webcam), which I wrote for another project.  
 The result would be like this:  
-<img src = "README/sony-yolo-3.png">  
+<img src = "sony-yolo-3.png">  
