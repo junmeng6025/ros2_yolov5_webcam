@@ -1,4 +1,3 @@
-Scrolling down for BASLER camera Setup*
 # SONY a7r4 Setup
 If you have already finished with the installing and build part and **just want to run the camera**, scroll down and start from **Run** part.
 ## 1) Connect SONY a7r4 to Ubuntu
