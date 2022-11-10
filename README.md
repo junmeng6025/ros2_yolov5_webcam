@@ -3,6 +3,11 @@
 - ROS2 (DISTRO: galactic) installed and sourced
 - YOLOv5 requirements satisfied
 # Run
+- source ros2
+    ```bash
+    source /opt/ros/galactic/setup.bash
+    ```
+    > use command `echo ${ROS_DISTRO} to make sure your current Terminal is sourced to a ROS2 distro, e.g. `galactic`
 - compile the workspace first  
     ```bash
     cd ros2_yolov5_webcam/colcon_ws
