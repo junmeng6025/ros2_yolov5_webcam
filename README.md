@@ -35,8 +35,7 @@
     ```
     to whom who interested with using an external SONY camera as a substitution of web-camera:  
     [SONY a7r4 setup for Ubuntu](sony_ubuntu_setup.md)
-<br/>
-<br/>
+
 ***
 # Implement YOLOv5 algorithm to our ROS node
 To learning how to build a ros node containing a custom submodule, check these blogs on ROS answer:  
