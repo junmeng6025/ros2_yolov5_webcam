@@ -33,10 +33,11 @@
     source install/setup.sh
     ros2 launch yolov5_detect yolo_sony_detect.launch.py
     ```
-    to whom who interested with using an external SONY camera as a substitution of web-camera:  
+    to whom who has interest in using an external SONY camera as a substitution of web-camera:  
     [SONY a7r4 setup for Ubuntu](sony_ubuntu_setup.md)
 
 ***
+below are some notes during development...
 # Implement YOLOv5 algorithm to our ROS node
 To learning how to build a ros node containing a custom submodule, check these blogs on ROS answer:  
 - [Including a Python module in a ROS2 package](https://answers.ros.org/question/367793/including-a-python-module-in-a-ros2-package/)  
