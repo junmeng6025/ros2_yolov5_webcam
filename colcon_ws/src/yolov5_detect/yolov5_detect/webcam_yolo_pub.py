@@ -9,7 +9,8 @@ from cv_bridge import CvBridge
 import cv2
 
 QUEUE_SZ = 10
-RATE = 0.1
+FPS = 30
+RATE = 1.0/FPS
 
 
 class ImagePublisher(Node):
@@ -17,15 +18,20 @@ class ImagePublisher(Node):
         super().__init__(name)
         self.publisher_ = self.create_publisher(Image, 'image_raw', QUEUE_SZ)
         self.timer = self.create_timer(RATE, self.timer_callback)
-        self.cap = cv2.VideoCapture(0)
+        self.cap = cv2.VideoCapture(2)
         self.cv_bridge = CvBridge()
         self.counter = 0
 
     def timer_callback(self):
+        if not self.cap.isOpened():
+            self.get_logger().error("Cannot open camera")
+
         ret, frame = self.cap.read()
         if ret:
             self.publisher_.publish(
                 self.cv_bridge.cv2_to_imgmsg(frame, 'bgr8'))
+        else:
+            self.get_logger().error("Can't receive frame (stream end?). Exiting ...")
 
         self.get_logger().info("Publishing video frame [#%04d]" % self.counter)
         self.counter += 1
