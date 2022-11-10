@@ -18,7 +18,7 @@ class ImagePublisher(Node):
         super().__init__(name)
         self.publisher_ = self.create_publisher(Image, 'image_raw', QUEUE_SZ)
         self.timer = self.create_timer(RATE, self.timer_callback)
-        self.cap = cv2.VideoCapture(2)
+        self.cap = cv2.VideoCapture(2)  # SONY camera devid
         self.cv_bridge = CvBridge()
         self.counter = 0
 
@@ -29,7 +29,7 @@ class ImagePublisher(Node):
         ret, frame = self.cap.read()
         if ret:
             self.publisher_.publish(
-                self.cv_bridge.cv2_to_imgmsg(frame, 'bgr8'))
+                self.cv_bridge.cv2_to_imgmsg(frame, 'bgr8'))  # encodeing mode is also bgr8
         else:
             self.get_logger().error("Can't receive frame (stream end?). Exiting ...")
 
