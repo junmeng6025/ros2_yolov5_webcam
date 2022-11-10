@@ -44,10 +44,8 @@ To learning how to build a ros node containing a custom submodule, check these b
 - [ROS2 Python relative import of my scritps](https://answers.ros.org/question/349790/ros2-python-relative-import-of-my-scritps/)  
 - [All google searching results...](https://www.google.com/search?q=submodules+in+setup.py+ros2&client=ubuntu&hs=0q9&channel=fs&sxsrf=ALiCzsacZQxK4_Va23YuXsC5pibK9ZZAMw%3A1666093937039&ei=cZNOY8P5AcPEkwW1o6f4CQ&ved=0ahUKEwiD9p3K2-n6AhVD4qQKHbXRCZ8Q4dUDCA4&uact=5&oq=submodules+in+setup.py+ros2&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEKIEOgoIABBHENYEELADOg0IABDkAhDWBBCwAxgBOggIABAIEAcQHjoFCAAQhgM6CAghEMMEEKABSgQITRgBSgQIQRgASgQIRhgBUPIGWLSaAmDJnAJoAnABeACAAbwCiAGoDZIBBzEuOS4wLjGYAQCgAQGgAQLIAQ3AAQHaAQYIARABGAk&sclient=gws-wiz)
 
-**How did I do:** 
-***
-*the following guide just works, but not so elegant...*
-*** 
+**How did I do:**  
+> the following guide just works, but not so elegant...*
 ## 0) re-write a class for YOLOv5 detector `detect_ros.py`
 Capsule the detect as a class `Yolov5Detector()`, which would be easier to be implemented in ros node script.  
 The `yolov5` folder is placed directly in our package folder, parallel with sub-package folder:
