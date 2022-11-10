@@ -7,7 +7,7 @@
     ```bash
     source /opt/ros/galactic/setup.bash
     ```
-    > use command `echo ${ROS_DISTRO} to make sure your current Terminal is sourced to a ROS2 distro, e.g. `galactic`
+    > use command `echo ${ROS_DISTRO}` to make sure your current Terminal is sourced to a ROS2 distro, e.g. `galactic`
 - compile the workspace first  
     ```bash
     cd ros2_yolov5_webcam/colcon_ws
@@ -27,6 +27,14 @@
     source install/setup.sh
     ros2 launch yolov5_detect yolo_webcam_detect.launch.py
     ```
+- **to friends who comes from the `SONY setup` project:**
+    ```bash
+    # stay in the /colcon_ws directory
+    source install/setup.sh
+    ros2 launch yolov5_detect yolo_sony_detect.launch.py
+    ```
+    to whom who interested with using an external SONY camera as a substitution of web-camera:  
+    `SONY a7r4 setup for Ubuntu`
 
 # Implement YOLOv5 algorithm to our ROS node
 To learning how to build a ros node containing a custom submodule, check these blogs on ROS answer:  
