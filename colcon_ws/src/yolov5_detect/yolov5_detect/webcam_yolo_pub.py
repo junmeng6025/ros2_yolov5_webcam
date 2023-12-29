@@ -18,7 +18,7 @@ class ImagePublisher(Node):
         super().__init__(name)
         self.publisher_ = self.create_publisher(Image, 'image_raw', QUEUE_SZ)
         self.timer = self.create_timer(RATE, self.timer_callback)
-        self.cap = cv2.VideoCapture(2)  # SONY camera devid
+        self.cap = cv2.VideoCapture(0)  # for SONY camera device: 2
         self.cv_bridge = CvBridge()
         self.counter = 0
 
