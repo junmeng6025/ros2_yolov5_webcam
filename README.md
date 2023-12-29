@@ -2,6 +2,11 @@
 # Pre-requisites
 - ROS2 (DISTRO: galactic) installed and sourced
 - YOLOv5 requirements satisfied
+- ROS `usb_cam` installed
+  
+  ```bash
+  sudo apt-get install ros-<ros2-distro>-usb-cam
+  ```
 # Run
 - source ros2
     ```bash
@@ -21,6 +26,11 @@
     ```bash
     /install/yolov5_detect/lib/python3.8/site-packages/yolov5/
     ```
+- make sure to set device-id as 0 in `webcam_yolo_pub.py`:
+
+    ```python
+    self.cap = cv2.VideoCapture(0)
+    ```
 - launch the nodes  
     ```bash
     # stay in the /colcon_ws directory
@@ -28,13 +38,20 @@
     ros2 launch yolov5_detect yolo_webcam_detect.launch.py
     ```
 - **to friends who comes from the `SONY setup` project:**
+    make sure to set device-id as 2 in `webcam_yolo_pub.py`:
+
+    ```python
+    self.cap = cv2.VideoCapture(2)
+    ```
+
+    to whom who has interest in using an external SONY camera as a substitution of web-camera:  
+    [SONY a7r4 setup for Ubuntu](sony_ubuntu_setup.md)  
+
     ```bash
     # stay in the /colcon_ws directory
     source install/setup.sh
     ros2 launch yolov5_detect yolo_sony_detect.launch.py
     ```
-    to whom who has interest in using an external SONY camera as a substitution of web-camera:  
-    [SONY a7r4 setup for Ubuntu](sony_ubuntu_setup.md)
 
 ***
 below are some notes during development...
