@@ -5,7 +5,7 @@
 - ROS `usb_cam` installed
   
   ```bash
-  sudo apt-get install ros-<ros2-distro>-usb-cam
+  sudo apt-get install ros-{ROS2_DISTRO}-usb-cam
   ```
 # Run
 - source ros2
